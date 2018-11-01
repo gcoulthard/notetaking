@@ -107,31 +107,3 @@ And here are a variety of font-awesome icons.
 
 PRESS: <kbd>Ctrl</kbd>+<kbd>F9</kbd> to proceed
 
-### Special Text Effects and Admonitions
-
-The ==Highlighted== End.
-
-::: info
-You've got mail!
-:::
-
-::: danger
-Don't click that link!
-::: 
-
-::: warning
-Buy that lotto ticket today!
-::: 
-
-::: success
-You did it!
-:::
-
-### Definition List
-Term 1
-  ~ Definition 1
-
-Term 2
-  ~ Definition 2a
-  ~ Definition 2b
-  
