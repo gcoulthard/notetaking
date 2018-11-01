@@ -102,8 +102,5 @@ What do I need to do today? Well, let's prepare a task list.
 Here are some basic emojis.  
 :smile:  :beer:  :cat:  :dog:
 
-And here are a variety of font-awesome icons.  
-:fa-truck: :fa-bus: :fa-heart: :fa-book: :fa-save:
-
 PRESS: <kbd>Ctrl</kbd>+<kbd>F9</kbd> to proceed
 
