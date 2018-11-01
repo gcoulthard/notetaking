@@ -1,0 +1,111 @@
+= This is a Title
+Glen Coulthard <gcoulthard@sample.com>
+:icons: font
+:icon-set: fa
+:source-highlighter: rouge
+
+== Heading 1
+And this is the text under a heading.
+
+.Sub-Heading (Optional)
+This is a paragraph with an optional Sub-Heading that may be styled differently.
+
+This is another paragraph under the same sub-heading.
+
+.Optional Note Heading
+[NOTE]
+This is an example of a single paragraph note.
+
+TIP: This is an example of a single paragraph TIP.
+
+== Heading 2: Blocks
+
+.Optional Listing Block
+----
+A listing block appears like this.
+And continues until four hyphens.
+----
+
+And now back to paragraphs.
+
+.Optional Source Block
+[source,html]
+----
+<h1>This is a Title</h1>
+<p class="StandOut">This is a paragraph</p>
+----
+
+.Optional Title
+====
+*Example* Block
+
+Default caption "Example:"
+can be changed using
+
+ [caption="Custom: "]
+
+before example block.
+====
+
+.Optional Title
+[NOTE]
+====
+*NOTE* Block
+
+Use: multi-paragraph notes.
+====
+
+.My Book Series
+[quote,Glen Coulthard,ProjectLearn]
+What a wonderful world is Excel.
+
+(C) and (R) and (TM) are all used. Also, -- emdash, ... ellipsis, -> arrow, <= arrow and &#182; other symbols using char symbol codes.
+
+* One
+* Two
+  - Three
+  - Four
+* Five
+  - Six
+    ** Seven
+
+.New Title
+. One
+. Two
+  .. Three
+  .. Four
+. Five
+  .. Six
+  ... Seven
+
+.Optional Title
+[horizontal]
+Term 1:: Definition
+Term 2::
+This is another one.
+
+[qanda]
+What is your favourite color?::
+Red
+What is your favourite car?::
+Ferrari
+
+.An example table
+[options="header,footer"]
+|===
+|Col 1|Col 2      |Col 3
+|1    |Item 1     |a
+|2    |Item 2     |b
+|3    |Item 3     |c
+|6    |Three items|d
+|===
+
+.CSV data, 15% each column (60% width)
+[format="csv",width="60%",cols="4"]
+[frame="topbot",grid="none"]
+|===
+1,2,3,4
+a,b,c,d
+A,B,C,D
+|===
+
