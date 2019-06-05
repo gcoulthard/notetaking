@@ -1,7 +1,7 @@
 = This is a Title
 Glen Coulthard <gcoulthard@sample.com>
 :icons: font
-:icon-set: fa
+:icon-set: far
 :source-highlighter: rouge
 
 == Heading 1
@@ -28,8 +28,8 @@ And continues until four hyphens.
 
 And now back to paragraphs.
 
-.Optional Source Block
-[source,html]
+.Optional Numbered Source Block
+[source,html,numbered]
 ----
 <h1>This is a Title</h1>
 <p class="StandOut">This is a paragraph</p>
