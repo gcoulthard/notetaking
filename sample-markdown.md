@@ -14,11 +14,16 @@ This is **the first content** that we'll be discussing. I have used a longer par
 
 ## Section 2
 
-Does markdown allow images? Why yes it does.
+Does markdown allow images and video? Why yes it does.
 
 ![Okanagan College](http://catalystforgrowth.ca/wp-content/uploads/2015/05/OSB_web300.jpg)
 
 ![Markdown Plus Logo](http://mdp.tylingsoft.com/icon.png)
+
+**Academic Writing in Markdown**
+[Direct link to YouTube video](https://www.youtube.com/watch?v=hpAJMSS8pvs)
+
+<iframe width="640" height="360" src="https://www.youtube.com/embed/hpAJMSS8pvs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Section 3
 
