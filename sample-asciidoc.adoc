@@ -3,6 +3,7 @@ Glen Coulthard <gcoulthard@sample.com>
 :icons: font
 :icon-set: far
 :source-highlighter: rouge
+:experimental:
 
 == Heading 1
 And this is the text under a heading.
