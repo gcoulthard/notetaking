@@ -1,112 +1,165 @@
-= This is a Title
-Glen Coulthard <gcoulthard@sample.com>
+= AsciiDoc Article Title
+Firstname Lastname <author@asciidoctor.org>
+1.0, July 31, 2018, Asciidoctor article template
+:doctype: article
+:toc:
 :icons: font
-:icon-set: far
-:source-highlighter: rouge
+:source-highlighter: coderay
 :experimental:
+:quick-uri: https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[Asciidoctor Quick Reference Guide]
 
-== Heading 1
-And this is the text under a heading.
+Content entered directly below the header but before the first section heading is called the *preamble*.
 
-.Sub-Heading (Optional)
-This is a paragraph with an optional Sub-Heading that may be styled differently.
+== First Level Heading
 
-This is another paragraph under the same sub-heading.
+This is a paragraph with a *bold* word and an _italicized_ word.
+What follows is a _float-group_ block, which allows you to place content aligned to the center, or to the left or right margins.
 
-.Optional Note Heading
+[.float-group]
+--
+[.left]
+.SVG Image caption
+image::asciidoctor-proof.svg[I am the image alt text.]
+This content should appear to the right of the SVG image (which is floated left). 
+The CSS template for the HTML rendering will be responsive to the page or screen width.
+This block has a single `[.left]` float command.
+--
+
+[.float-group]
+--
+[.right]
+.JPG Image caption
+image::asciidoctor-rescue.jpg[width=320]
+This content should appear to the left of the JPG image (which is floated to the right).
+Like the previously floated group, this block has a single float command `[.right]`. However you could have multiple float commands in a single block.
+--
+
+This paragraph appears after the `[.float-group]` blocks and includes a footnote. The footnote that appears provides a hyperlink to the _footnote text_ at the end of the article. Specifically, clicking the hyperlinked number takes you to the footnote; clicking on the number in the footnote returns you back to the current section. footnote:[I am footnote text and will be displayed at the bottom of the article.]
+
+=== Second Level Heading
+
+Asciidoctor provides the standard character and paragraph formatting options, including ordered and unordered lists.
+
+.Unordered list title
+* list item 1
+** nested list item
+*** nested nested list item 1
+*** nested nested list item 2
+* list item 2
+
+.Ordered list title
+. list item 1
+.. nested list item
+... nested list item 1
+... nested list item 2
+. list item 2
+
 [NOTE]
-This is an example of a single paragraph note.
-
-TIP: This is an example of a single paragraph TIP.
-
-== Heading 2: Blocks
-
-.Optional Listing Block
-----
-A listing block appears like this.
-And continues until four hyphens.
-----
-
-And now back to paragraphs.
-
-.Optional Numbered Source Block
-[source,html,numbered]
-----
-<h1>This is a Title</h1>
-<p class="StandOut">This is a paragraph</p>
-----
-
-.Optional Title
 ====
-*Example* Block
-
-Default caption "Example:"
-can be changed using
-
- [caption="Custom: "]
-
-before example block.
+You can use admonitions, such as this `NOTE:`, to provide helpful information for the reader. For example, you can choose between arabic, decimal (leading 0), upper or lower alpha, and upper or lower roman characters for ordered list items by specifying options in the attributes section at the top of the article.
 ====
 
-.Optional Title
-[NOTE]
+.Ordered decimal list
+[decimal]
+. list item 1
+. list item 2
+. list item 3
+
+.Checklist title
+* [ ] list item not checked
+* [x] list item checked
+* [ ] list item not checked
+
+.Example block title
 ====
-*NOTE* Block
-
-Use: multi-paragraph notes.
+Content in an example block is subject to normal substitutions. +
+PRESS: kbd:[Ctrl+Enter] to proceed +
+PRESS: kbd:[Ctrl+Shift+Esc] to exit +
+CLICK: btn:[OK] button to proceed
 ====
 
-.My Book Series
-[quote,Glen Coulthard,ProjectLearn]
-What a wonderful world is Excel.
+.Sidebar title
+****
+Sidebars contain aside text and are subject to normal substitutions, such as this line break. +
+Notice that the title appears centered within the block itself, as opposed to the _Example_ block.
+****
 
-(C) and (R) and (TM) are all used. Also, -- emdash, ... ellipsis, -> arrow, <= arrow and &#182; other symbols using char symbol codes.
+==== Third Level Heading
 
-* One
-* Two
-  - Three
-  - Four
-* Five
-  - Six
-    ** Seven
+[#id-for-listing-block]
+.Listing block title
+----
+Content in a listing block is subject to verbatim substitutions.
+Listing block content is commonly used to preserve code input.
+Notice that this block does not require the `+` line feed character.
+----
 
-.New Title
-. One
-. Two
-  .. Three
-  .. Four
-. Five
-  .. Six
-  ... Seven
+.Ruby code block
+[source,ruby]
+----
+require 'sinatra'
 
-.Optional Title
-[horizontal]
-Term 1:: Definition
-Term 2::
-This is another one.
+get '/hi' do
+  "Hello World!"
+end
+----
 
-[qanda]
-What is your favourite color?::
-Red
-What is your favourite car?::
-Ferrari
+===== Fourth Level Heading
 
-.An example table
-[options="header,footer"]
+Tables are far nicer to work with in Asciidoctor than Markdown.
+
+.Table title
 |===
-|Col 1|Col 2      |Col 3
-|1    |Item 1     |a
-|2    |Item 2     |b
-|3    |Item 3     |c
-|6    |Three items|d
+|Column heading 1 |Column heading 2
+
+|Column 1, row 1
+|Column 2, row 1
+
+|Column 1, row 2
+|Column 2, row 2
 |===
 
-.CSV data, 15% each column (60% width)
-[format="csv",width="60%",cols="4"]
-[frame="topbot",grid="none"]
-|===
-1,2,3,4
-a,b,c,d
-A,B,C,D
-|===
+===== Another Fourth Level Heading
 
+[quote, firstname lastname, movie title]
+____
+I am a block quote or a prose excerpt.
+I am subject to normal substitutions.
+____
+
+[verse, firstname lastname, poem title and more]
+____
+I am a verse block.
+  Indents and endlines are preserved in verse blocks.
+____
+
+=== Second Level Heading
+
+There are five admonition labels: Tip, Note, Important, Caution and Warning.
+
+TIP: This is a *TIP*
+
+NOTE: This is a *NOTE*
+
+IMPORTANT: This is *IMPORTANT*
+
+CAUTION: This is a *CAUTION*
+
+WARNING: This is a *WARNING*
+
+You can add comments that will not appear in the rendered output using `//` for inline or `////` for blocks.
+
+// I am a comment and won't be rendered.
+
+////
+I am a comment too.
+But I cover multiple lines!
+////
+
+==== Another Third Level Heading
+
+The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading>>, which kind of makes this _wiki-like_ in a way.
+This is a hyperlink to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual].
+This is a hyperlinked attribute reference which links this text to the {quick-uri}.
+
+The End.
